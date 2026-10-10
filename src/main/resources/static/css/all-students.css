@@ -1,0 +1,953 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    height: 76px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    font-size: 20px;
+    color: #111827;
+}
+
+.brand p {
+    margin-top: 3px;
+
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.register-btn {
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+    padding: 45px 25px;
+}
+
+
+/* =========================================================
+   STUDENT CARD
+   ========================================================= */
+
+.student-card {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.card-header {
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h2 {
+    font-size: 22px;
+    color: #111827;
+}
+
+.card-header p {
+    margin-top: 5px;
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* Student Count */
+
+.student-count {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SEARCH SECTION
+   ========================================================= */
+
+.search-section {
+    width: 100%;
+
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* Search Form */
+
+.search-section form {
+    flex: 1;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* Search Input */
+
+.search-section input {
+    flex: 1;
+
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    color: #1f2937;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-section input::placeholder {
+    color: #9ca3af;
+}
+
+.search-section input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Search Button */
+
+.search-btn {
+    height: 42px;
+
+    padding: 0 22px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Show All Button */
+
+.show-all-btn {
+    height: 42px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f4f6;
+    color: #111827;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: background 0.2s ease;
+}
+
+.show-all-btn:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================================
+   BRANCH FILTER SECTION
+   ========================================================= */
+
+.filter-section {
+    width: 100%;
+
+    padding: 18px 24px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* Filter Form */
+
+.filter-section form {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Filter Label */
+
+.filter-section label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    white-space: nowrap;
+}
+
+
+/* Branch Dropdown */
+
+.filter-section select {
+    height: 40px;
+
+    min-width: 150px;
+
+    padding: 0 35px 0 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filter-section select:hover {
+    border-color: #9ca3af;
+}
+
+.filter-section select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Filter Button */
+
+.filter-btn {
+    height: 40px;
+
+    padding: 0 18px;
+
+    background: #10b981;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #059669;
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: collapse;
+}
+
+
+/* Table Header */
+
+thead {
+    background: #f9fafb;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    white-space: nowrap;
+}
+
+
+/* Table Data */
+
+td {
+    padding: 15px;
+
+    font-size: 13px;
+
+    color: #4b5563;
+
+    border-bottom: 1px solid #f0f1f3;
+
+    white-space: nowrap;
+}
+
+
+/* Row Hover */
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* ID */
+
+td:first-child {
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Edit Button */
+
+.edit-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Delete Form */
+
+.delete-form {
+    margin: 0;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+    padding: 7px 13px;
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+    border: 1px solid #dc2626;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================================================
+   NO STUDENTS
+   ========================================================= */
+
+.no-students {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Header */
+
+    .header {
+        height: auto;
+
+        min-height: 76px;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand h1 {
+        font-size: 16px;
+    }
+
+    .brand p {
+        display: none;
+    }
+
+    .register-btn {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    /* Main */
+
+    .main-content {
+        padding: 25px 15px;
+    }
+
+
+    /* Card Header */
+
+    .card-header {
+        padding: 22px 20px;
+
+        gap: 15px;
+    }
+
+    .card-header h2 {
+        font-size: 20px;
+    }
+
+    .card-header p {
+        font-size: 12px;
+    }
+
+
+    /* Search */
+
+    .search-section {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-section form {
+        width: 100%;
+    }
+
+    .search-section input {
+        min-width: 0;
+    }
+
+    .search-btn {
+        padding: 0 16px;
+    }
+
+    .show-all-btn {
+        width: 100%;
+    }
+
+
+    /* Branch Filter */
+
+    .filter-section {
+        padding: 15px 20px;
+    }
+
+    .filter-section form {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .filter-section label {
+        width: 100%;
+    }
+
+    .filter-section select {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .filter-btn {
+        padding: 0 16px;
+    }
+
+
+    /* Table */
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 1100px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .header {
+        padding: 12px 15px;
+    }
+
+    .brand-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 11px;
+    }
+
+    .brand h1 {
+        font-size: 14px;
+    }
+
+    .register-btn {
+        padding: 8px 10px;
+
+        font-size: 11px;
+    }
+
+
+    .main-content {
+        padding: 20px 10px;
+    }
+
+
+    .card-header {
+        padding: 18px 15px;
+    }
+
+    .student-count {
+        width: 36px;
+        height: 36px;
+
+        font-size: 12px;
+    }
+
+
+    .search-section {
+        padding: 15px;
+    }
+
+    .search-section form {
+        flex-direction: column;
+    }
+
+    .search-section input {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+
+    .filter-section {
+        padding: 15px;
+    }
+
+    .filter-section form {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .filter-section label {
+        width: 100%;
+    }
+
+    .filter-section select {
+        width: 100%;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   PAGINATION
+   ========================= */
+
+.pagination-section {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   PAGINATION INFORMATION
+   ========================= */
+
+.pagination-info {
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+.pagination-info span {
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* =========================
+   PAGINATION BUTTONS
+   ========================= */
+
+.pagination {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+/* Every pagination button */
+
+.page-btn {
+    min-width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 12px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover */
+
+.page-btn:hover {
+    background: #eff6ff;
+
+    border-color: #2563eb;
+
+    color: #2563eb;
+}
+
+
+/* Current Page */
+
+.page-btn.active {
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border-color: #2563eb;
+}
+
+
+/* Current page hover */
+
+.page-btn.active:hover {
+    background: #1d4ed8;
+
+    color: #ffffff;
+
+    border-color: #1d4ed8;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .pagination-section {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 20px;
+    }
+
+
+    .pagination-info {
+        text-align: center;
+    }
+
+
+    .pagination {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .page-btn {
+        min-width: 34px;
+
+        height: 34px;
+
+        padding: 0 10px;
+    }
+
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Student | College Management System</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/register-student.css}">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="brand-icon">CMS</div>
+
+            <div>
+                <h1>College Management</h1>
+                <p>Student Management System</p>
+            </div>
+        </div>
+
+        <a th:href="@{/viewAllStudents}" class="students-btn">
+            View All Students
+        </a>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <div class="form-card">
+
+            <div class="form-header">
+
+                <div class="form-icon">
+                    +
+                </div>
+
+                <div>
+                    <h2>Register New Student</h2>
+                    <p>
+                        Enter the student's information below
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Success Message -->
+            <div th:if="${successMessage}"
+                 class="success-message"
+                 th:text="${successMessage}">
+            </div>
+
+
+            <form th:action="@{/registerStudent}"
+                  th:object="${student}"
+                  method="post">
+
+                <!-- Personal Information -->
+                <div class="section">
+
+                    <h3>Personal Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input type="text"
+                                   id="firstName"
+                                   th:field="*{firstName}"
+                                   placeholder="Enter first name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input type="text"
+                                   id="lastName"
+                                   th:field="*{lastName}"
+                                   placeholder="Enter last name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="age">
+                                Age
+                            </label>
+
+                            <input type="number"
+                                   id="age"
+                                   th:field="*{age}"
+                                   placeholder="Enter age"
+                                   min="1"
+                                   max="100"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                Gender
+                            </label>
+
+                            <select id="gender"
+                                    th:field="*{gender}"
+                                    required>
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Information -->
+                <div class="section">
+
+                    <h3>Contact Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   th:field="*{email}"
+                                   placeholder="student@example.com"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phoneNumber">
+                                Phone Number
+                            </label>
+
+                            <input type="tel"
+                                   id="phoneNumber"
+                                   th:field="*{phoneNumber}"
+                                   placeholder="Enter phone number"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="city">
+                                City
+                            </label>
+
+                            <input type="text"
+                                   id="city"
+                                   th:field="*{city}"
+                                   placeholder="Enter city"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Academic Information -->
+                <div class="section">
+
+                    <h3>Academic Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="year">
+                                Year
+                            </label>
+
+                            <select id="year"
+                                    th:field="*{year}"
+                                    required>
+
+                                <option value="">
+                                    Select year
+                                </option>
+
+                                <option value="1">
+                                    1st Year
+                                </option>
+
+                                <option value="2">
+                                    2nd Year
+                                </option>
+
+                                <option value="3">
+                                    3rd Year
+                                </option>
+
+                                <option value="4">
+                                    4th Year
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="branch">
+                                Branch
+                            </label>
+
+                            <select id="branch"
+                                    th:field="*{branch}"
+                                    required>
+
+                                <option value="">
+                                    Select branch
+                                </option>
+
+                                <option value="CSE">
+                                    Computer Science (CSE)
+                                </option>
+
+                                <option value="ECE">
+                                    Electronics (ECE)
+                                </option>
+
+                                <option value="ME">
+                                    Mechanical (ME)
+                                </option>
+
+                                <option value="CE">
+                                    Civil (CE)
+                                </option>
+
+                                <option value="EE">
+                                    Electrical (EE)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="category">
+                                Category
+                            </label>
+
+                            <select id="category"
+                                    th:field="*{category}"
+                                    required>
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="General">
+                                    General
+                                </option>
+
+                                <option value="OBC">
+                                    OBC
+                                </option>
+
+                                <option value="SC">
+                                    SC
+                                </option>
+
+                                <option value="ST">
+                                    ST
+                                </option>
+
+                                <option value="EWS">
+                                    EWS
+                                </option>
+
+                                <option value="Defence">Defence</option>
+                                <option value="Single Girl Child">Single Girl Child</option>
+                                <option value="Rural Area">Rural Area</option>
+                                <option value="PWD">PWD</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <button type="reset"
+                            class="reset-btn">
+                        Clear Form
+                    </button>
+
+                    <button type="submit"
+                            class="register-btn">
+                        Register Student
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 College Management System
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
